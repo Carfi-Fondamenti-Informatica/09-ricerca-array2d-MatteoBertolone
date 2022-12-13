@@ -1,16 +1,17 @@
 #include "lib.h"
 
-int comp(char list[10][20], char name[]){
+bool cerca(char lista[10][20], int &posizione, char target[]){
     for(int i=0;i<10;i++){
         for(int j=0;j<20;j++){
-            if(list[i][j] != name[j])
-                break;
-            else{
-                if(j==19){
-                    return i+1;
-                }
+            if(lista[i][j] != target[j]){
+                j = 20;
+            }else{
+              if(j==19){
+                  posizione = i;
+                  return true;
+              }
             }
         }
     }
-    return -1;
+    return false;
 }
