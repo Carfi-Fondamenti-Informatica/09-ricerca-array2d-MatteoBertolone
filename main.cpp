@@ -3,23 +3,23 @@
 using namespace std;
 
 int main() {
-    char lista[10][20];
-    char target[20];
-    int pos = 0;
+    char list[10][20];
+    char name[20];
+    int p = 0;
 
     for(int i=0;i<10;i++){
         for(int j=0;j<20;j++) {
-            target[j] = ' ';
-            lista[i][j] = ' ';
+            name[j] = ' ';
+            list[i][j] = ' ';
         }
     }
     for(int i=0;i<10;i++){
-        cin >> lista[i];
+        cin >> list[i];
     }
 
     cin >> target;
-    if(cerca(lista,pos,target)){
-        cout << pos;
+    if(comp(list,p,name)){
+        cout << p;
     }else{
         cout << "non presente";
     }
