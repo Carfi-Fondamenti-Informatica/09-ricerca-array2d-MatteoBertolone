@@ -17,7 +17,7 @@ int main() {
         cin >> list[i];
     }
 
-    cin >> target;
+    cin >> name;
     if(comp(list,p,name)){
         cout << p;
     }else{
